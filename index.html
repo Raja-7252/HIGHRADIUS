@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HighRadius</title>
+	<link rel="stylesheet" type="text/css" href="styless.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class=first>
+    <svg xmlns="http://www.w3.org/2000/svg" width="290" height="52" viewBox="0 0 290 52"><defs><style>.a{fill:#CD7925}.b{fill:#fff;font-size:39px;font-family:SegoeUI, Segoe UI;}</style></defs><g transform="translate(-30 -16)"><g transform="translate(12.194 22.4)"><path class="a" d="M392.061,14.05l2.6-4.644-1.619-.917-2.6,4.644Zm-2.292,13.414-1.619-.917-2.444,4.339,1.619.917Zm-6.447-1.681,1.619.917,2.6-4.644-1.619-.917ZM394.78,14.722l-2.444,4.339,1.619.917,2.444-4.339Zm-5.775,10.266,1.619.917,2.444-4.339-1.619-.917Zm-2.567,8.4-1.619-.917-1.039,1.864-1.619-2.658,1.864-3.3-1.619-.917-1.344,2.383-1.619-2.658L392.152,4.517,390.533,3.6,383.2,16.647a9.107,9.107,0,0,0-.917-.061h-.092a6.4,6.4,0,0,0-2.719.611l-.275.153a4.412,4.412,0,0,1-1.894.367h-.092a4.564,4.564,0,0,1-1.8-.367l-.244-.153a5.931,5.931,0,0,0-2.842-.642h-.092a5.712,5.712,0,0,0-2.719.642l-.214.153a4.424,4.424,0,0,1-1.894.367h-.092a4.1,4.1,0,0,1-1.8-.367l-.153-.122L365.3,17.2a5.765,5.765,0,0,0-2.75-.642h-.092a5.552,5.552,0,0,0-2.842.642l.947,1.619a4.412,4.412,0,0,1,1.894-.367h.061a4.1,4.1,0,0,1,1.8.367l.153.122.061.031a5.765,5.765,0,0,0,2.75.642h.092a5.552,5.552,0,0,0,2.842-.642l.214-.153a4.1,4.1,0,0,1,1.8-.367h.061a4.506,4.506,0,0,1,1.894.367l.244.153a5.712,5.712,0,0,0,2.719.642h.122A5.8,5.8,0,0,0,380.083,19l.275-.153a4.049,4.049,0,0,1,1.8-.367l-1.833,3.239a6.679,6.679,0,0,0-2.261-.428h-.183a6.4,6.4,0,0,0-2.719.611l-.275.153a4.412,4.412,0,0,1-1.894.367H372.9a4.564,4.564,0,0,1-1.8-.367l-.244-.153a5.931,5.931,0,0,0-2.842-.642h-.092a5.712,5.712,0,0,0-2.719.642l-.214.153a4.422,4.422,0,0,1-1.894.367H363a4.1,4.1,0,0,1-1.8-.367l-.153-.122-.061-.031a5.766,5.766,0,0,0-2.75-.642h-.092a5.552,5.552,0,0,0-2.842.642l.947,1.619a4.412,4.412,0,0,1,1.894-.367h.061a4.1,4.1,0,0,1,1.8.367l.153.122.061.031a5.765,5.765,0,0,0,2.75.642h.092a5.552,5.552,0,0,0,2.842-.642l.214-.153a4.1,4.1,0,0,1,1.8-.367h.092a4.351,4.351,0,0,1,1.894.367l.244.153a5.712,5.712,0,0,0,2.719.642h.122a5.8,5.8,0,0,0,2.811-.611l.275-.153a4.114,4.114,0,0,1,1.833-.367h.061a5.091,5.091,0,0,1,1.436.214l-1.681,2.964H352.4v1.864h14.666l12.1,19.8,1.589-.978L369.267,28.2h3.239l13.016,21.45,1.589-.978L374.675,28.2h3.178l13.23,21.694,1.589-.978L384.88,36.141Zm3.025-18.547-2.6,4.644,1.619.917,2.6-4.644Z" transform="translate(-334.594 -6)"/></g><text class="b" transform="translate(86 58)"><tspan x="0" y="0">ABC Products</tspan></text></g></svg>
+        
+        </div>
+  <a class="highradius"><img src="logo.svg"></a>
+      <h2>Invoice list</h2>
+      <div class="navbar">
+     <ul> 
+     <li ><a href="#" id="button" class="butt"><i class="fa fa-plus-square-o fa-fw-fh" aria-hidden="true">&nbsp;Add</i></a></li>
+	<li class="active"><a href="#" id="edit" class="butt"><i class="fa fa-pencil-square-o fa-fw-fh" aria-hidden="true">&nbsp;&nbsp;Edit</i></a></li>
+	<li class="active"><a href="#" id="delete" class="butt"><i class="fa fa-minus fa-fw-fh" aria-hidden="true">&nbsp;&nbsp;Delete</i></a></li>
+	<label for="search" class=num></label>
+            <input type="search" id="searchinput" placeholder="Search By Number" name="search" onkeyup="searchFun()" />
+</ul>
+</div>
+
+<div class=popup>
+  <div class="popup-content">
+    <h1 class=content>Add Invoice</h1>
+    <div class=close>
+    <i class="fa fa-window-close" aria-hidden="true"></i>
+  </div>
+    <p>
+    <label for="txt">*Customer Name:
+            <input type="TEXT" name="txt" id="customer" placeholder="" value="" maxlength="10" required autofocus>
+            </p>
+            <p>
+            <label for="txt">*Customer NO:</label>
+            <input type="TEXT" name="number" id="number" placeholder="" value="" maxlength="10" required autofocus>
+            </p>
+            <p>
+            <label for="txt">*Invoice No :</label>
+            <input type="TEXT" name="no" id="voice" placeholder="" value="" maxlength="10" required autofocus>
+            </p>
+            <p>
+            <label for="txt">*Invoice Amount:</label>
+            <input type="TEXT"  id="amount" placeholder="" value="" maxlength="" required autofocus>
+            </p>
+            <p>
+            <label for="txt">*Customer Name:</label>
+            <input type="TEXT"  id="name" placeholder="" value="" maxlength="" required autofocus>
+            </p>
+            <p>
+              <label for="date">Due Date*</label>
+            <input type="date"  id="date" value=""/>
+          </p>
+        <p>
+            Notes
+            <textarea id="note" name="" cols="50" rows="8" wrap="hard" scrolling="no" resize-right="no">
+            </textarea>
+          </p>
+          <p>
+          
+            <input type="Submit" name="btnSubmit"id="btnSubmit" value="Clear">
+             <button onclick="addHtmlmyTableRow();">Add</button>
+        </p>
+  </div>
+  
+</div>
+
+<script>
+  document.getElementById("button").addEventListener("click",function(){document.querySelector(".popup").style.display = "flex"; })
+  document.querySelector(".close").addEventListener("click",function(){document.querySelector(".popup").style.display="none";})
+</script>
+<div class=pop-up>
+  <div class="popup-information">
+    <h1 class=content>Edit Invoice</h1>
+    <div class=cls>
+    <i class="fa fa-window-close" aria-hidden="true"></i>
+  </div>
+     <p>
+    <label for="txt">*Invoice Amount</label>
+            <input type="TEXT" name="txt" id="text" placeholder="" value="" maxlength="10" required autofocus>
+            </p>
+            <p>
+            Notes
+            <textarea id="text" name="" cols="50" rows="8" wrap="hard" scrolling="no" resize-right="no">
+            </textarea>
+          </p>
+          <p>
+          
+            <input type="Reset" name="btnSubmit"id="btnReset" value="Reset">
+            <button>Save</button>
+        </p>
+        <p>
+          <a href="" class="cancel">Cancel</a>
+        </p>
+           
+  </div>
+  </div>
+  <script>
+  document.getElementById("edit").addEventListener("click",function(){document.querySelector(".pop-up").style.display = "flex"; })
+  document.querySelector(".cls").addEventListener("click",function(){document.querySelector(".pop-up").style.display="none";})
+
+  </script>
+  <div class=delete>
+    <div class="delete-information">
+       <div class=cl>
+    <i class="fa fa-window-close" aria-hidden="true"></i>
+  </div>
+      <h1>Delete record(s)?</h1>
+      <p>You'll lose your record(s) after this action.We can't recover them once you delete.</p>
+      <p>Are you sure you want to <font color=red>permanently delete</font> them? </p>
+      <p>
+         <button>Cancel</button>
+          <button class=erase>Delete</button>
+        
+      </p>
+    </div>
+    
+  </div>
+  <script>
+  document.getElementById("delete").addEventListener("click",function(){document.querySelector(".delete").style.display = "flex"; })
+  document.querySelector(".cl").addEventListener("click",function(){document.querySelector(".delete").style.display="none";})
+
+  </script>
+
+<table width=100% id="myTable">
+	<tr>
+		<th><input type="checkbox">Customer Name</th>
+		<th>Customer</th>
+		<th>Invoice</th>
+		<th>Invoice Amount</th>
+		<th>Due Date</th>
+		<th>Predicted Payment Date</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+    <td align=center><input type="checkbox">Andrea Jamesyug</td>
+    <td align=center> 2555 </td>
+    <td align=center> 3456790066 </td>
+    <td align=center> 122.8k</td>
+    <td align=center><fon>23</font></td>
+    <td align=center> - </td>
+    <td align=center> lorem </td> 
+  </tr>
+  <tr>
+    <td align=center><input type="checkbox">Jessica chowsday</font></td>
+    <td align=center> 2666</td>
+    <td align=center> 8753589 </td>
+    <td align=center> 17.8k</td>
+    <td align=center><fon>15</font></td>
+    <td align=center> - </td>
+    <td align=center> lorem </td>
+  </tr>
+  <tr>
+    <td align=center><input type="checkbox">John Ibrahimbaa</font></td>
+    <td align=center> 7777 </td>
+    <td align=center> 56790066 </td>
+    <td align=center> 322.8k</td>
+    <td align=center><fon>3</font></td>
+    <td align=center> - </td>
+    <td align=center> lorem </td>
+  </tr>
+  <tr>
+    <td align=center><input type="checkbox">Ramesh Nyakaa</font></td>
+    <td align=center> 6355 </td>
+    <td align=center> 7556790066 </td>
+    <td align=center> 432.8k</td>
+    <td align=center><fon>5</font></td>
+    <td align=center> - </td>
+    <td align=center> lorem </td>
+  </tr>
+</table>
+<script>
+  var rIndex,
+                table = document.getElementById("myTable");
+            
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    customer = document.getElementById("customer").value,
+                    number = document.getElementById("number").value,
+                    voice = document.getElementById("voice").value;
+            
+                if(customer === ""){
+                    alert("Customer Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(number === ""){
+                    alert("Customer No Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(voice === ""){
+                    alert("Invoice Connot Be Empty");
+                    isEmpty = true;
+                }
+                return isEmpty;
+            }
+            
+            // add Row
+            function addHtmlmyTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = myTable.insertRow(myTable.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    customer = document.getElementById("customer").value,
+                    number = document.getElementById("number").value,
+                    voice = document.getElementById("voice").value;
+            
+                cell1.innerHTML = customer;
+                cell2.innerHTML = number;
+                cell3.innerHTML = voice;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < myTable.rows.length; i++)
+                {
+                    myTable.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("customer").value = this.cells[0].innerHTML;
+                      document.getElementById("number").value = this.cells[1].innerHTML;
+                      document.getElementById("voice").value = this.cells[2].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+            
+</script>
+<script type="text/javascript">
+  const searchFun = () =>{
+    let filter = document.getElementById('searchinput').value.toUpperCase();
+
+    let myTable = document.getElementById('myTable');
+
+    let tr = myTable.getElementsByTagName('tr');
+
+
+    for(var i = 0; i<tr.length;i++ )
+    {
+
+      let td = tr[i].getElementsByTagName('td')[0];
+
+      if(td){
+        let textvalue = td.textContent || td.innerHTML;
+
+        if(textvalue.toUpperCase().indexOf(filter) > -1){
+          tr[1].style.display = "";
+
+        }else{
+          tr[i].style.display = "none";
+
+        }
+
+      }
+    }
+
+
+  }
+
+</script>
+</body>
+</html>
